@@ -1,0 +1,25 @@
+#cloud-config
+groups:
+  - ubuntu: [root,sys]
+  - hashicorp
+
+# Add users to the system. Users are added after groups are added.
+users:
+  - default
+  - name: terraform
+    gecos: terraform
+    shell: /bin/bash
+    primary_group: hashicorp
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys:
+      - # Paste your created SSH key here
+
+runcmd:
+  - sudo apt-get update
+  - sudo apt install apache2 -q -y
+  - sudo curl https://raw.githubusercontent.com/tr0njavolta/learn-terramino/digitalocean-droplet/index.php -O
+  - sudo rm /var/www/html/index.html
+  - sudo mv index.php /var/www/html
+  - sudo systemctl restart apache2
