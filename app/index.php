@@ -12,8 +12,7 @@
     }
 
     body {
-      /* background-image: url("https://raw.githubusercontent.com/hashicorp/learn-terramino/main/assets/background.png"); */
-      background-image: url("https://raw.githubusercontent.com/tr0njavolta/learn-terraform-circleci/master/assets/background.png");
+      background-image: url("https://raw.githubusercontent.com/hashicorp/learn-terramino/master/background.png");
       display: flex;
       align-items: center;
       justify-content: center;
