@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MIT
+
 <html>
 
 <head>
