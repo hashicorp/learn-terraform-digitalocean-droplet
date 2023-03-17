@@ -1,7 +1,7 @@
+#cloud-config
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MIT
 
-#cloud-config
 groups:
   - ubuntu: [root,sys]
   - hashicorp
